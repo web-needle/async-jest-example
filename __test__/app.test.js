@@ -5,8 +5,9 @@ describe('Api testing', () => {
     
     let server;
     beforeEach(() => {
-      server = require('./app.js');
+      server = require('../app.js');
     });
+
     afterEach(() => {
       server.close();
     });
