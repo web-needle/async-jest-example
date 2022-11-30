@@ -1,78 +1,65 @@
-const request = require('supertest');
+import request from 'supertest';
+import app from '../app.js';
 
 describe('Api testing', () => {
     const user =  { id: "1", name: "Username", login: "user"};
     
-    let server;
-    beforeEach(() => {
-      server = require('../app.js');
-    });
-
-    afterEach(() => {
-      server.close();
-    });
-
-    it('Get all users', (done) => {
+    it('Get all users', async () => {
         const expectedResponse = []
-        request(server)
-        .get('/')
-        .expect(200)
-        .end((err, res) => {
-            expect(res.body).toEqual(expectedResponse)
-            done();
-        })
+        
+        const response = await request(app).get('/');
+
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual(expectedResponse)       
     })
-    it('Create a user', (done) => {
+
+    it('Create a user', async () => {
         const expectedResponse = [
             user
         ]
-        request(server)
-        .post('/user')
-        .send(user)
-        .expect(200)
-        .end((err, res) => {
-            expect(res.body).toEqual(expectedResponse)
-            done();
-        })
+
+        const response = await request(app)
+                                    .post('/user')
+                                    .send(user);
+
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual(expectedResponse)
     })
-    it('Get user record by id', (done) => {
+
+    it('Get user record by id', async () => {
         const expectedResponse = {
             ...user
         }
-        request(server)
-        .get('/user/1')
-        .expect(200)
-        .end((err, res) => {
-            expect(res.body).toEqual(expectedResponse)
-            done();
-        })
+
+        const response = await request(app).get('/user/1')
+        
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual(expectedResponse)
+
     })
-    it('Update a user record', (done) => {
+    it('Update a user record', async () => {
         const updateUser = {
             name: 'Updated name'
         }
+        
         const expectedResponse = {
             ...user, ...updateUser
         }
-        request(server)
-        .put('/user/1')
-        .send(updateUser)
-        .expect(200)
-        .end((err, res) => {
-            expect(res.body).toEqual(expectedResponse)
-            done();
-        })
+
+        const response = await request(app).put('/user/1').send(updateUser)
+        
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual(expectedResponse)
     })
-    it('Get user record which does not exists', (done) => {
+
+    it('Get user record which does not exists', async () => {
         const expectedResponse = {
             message: 'No user found with given ID'
         }
-        request(server)
-        .get('/user/2')
-        .expect(400)
-        .end((err, res) => {
-            expect(res.body).toEqual(expectedResponse)
-            done();
-        })
+
+        const response = await request(app).get('/user/2')
+        
+        expect(response.statusCode).toBe(400);
+        expect(response.body).toEqual(expectedResponse)
     })
 })

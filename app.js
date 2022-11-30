@@ -1,10 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
 // Middlewares
-app.use(bodyParser.json());
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // Routes
 let users = [];
@@ -12,10 +16,12 @@ let users = [];
 app.get('/', (req, res) => {
     res.send(users)
 })
+
 app.post('/user', (req, res) => {
     users.push(req.body);
     res.send(users)
 })
+
 app.get('/user/:id', (req, res) => {
     const userById = users.find(user => user.id === req.params.id);
     if(userById) {
@@ -26,6 +32,7 @@ app.get('/user/:id', (req, res) => {
         })
     }
 })
+
 app.put('/user/:id', (req, res) => {
     const userByIdIndex = users.findIndex(user => user.id === req.params.id);
     if(userByIdIndex !== -1) {
@@ -39,9 +46,12 @@ app.put('/user/:id', (req, res) => {
     }
 })
 
-// Start listening
-const server = app.listen(4000, () => {
-    console.log('Server started at 4000')
-})
+// register custom error handling middleware
+app.use(
+  (err, req, res, next) => {
+    res.status(err.status).send(err.message);
+  }
+);
 
-module.exports = server;
+
+export default app;
