@@ -7,7 +7,7 @@ An example application for demonstrating the usage of supertest for writing unit
 You must follow the instructions below:
 
 1. Run command `npm install`; 
-2. Run command `npm tets`
+2. Run command `npm test`
 
 You will see this output below:
 
