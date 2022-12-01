@@ -9,22 +9,22 @@ const new_user = fixtures.new_user;
 const inexistent_update_user = fixtures.inexistent_update_user;
 const existent_update_user = fixtures.existent_update_user;
 
-describe('API testing', () => {
-    /**
-     * Mocked Express Request object.
-     */
-    let req
+/**
+ * Mocked Express Request object.
+ */
+let req
 
-    /**
-     * Mocked Express Response object.
-     */
-    let res
+/**
+ * Mocked Express Response object.
+ */
+let res
 
-    /**
-     * Mocked Express Next function.
-     */
-    const next = jest.fn()
-    
+/**
+ * Mocked Express Next function.
+ */
+const next = jest.fn()
+
+describe('API testing', () => {   
     /**
      * Reset the `req` and `res` object before each test is ran.
      */
