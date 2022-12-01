@@ -1,5 +1,7 @@
 # async-jest-example
 
+[![codecov](https://codecov.io/gh/web-needle/async-jest-example/branch/main/graph/badge.svg?token=VOQ4SD0JT7)](https://codecov.io/gh/web-needle/async-jest-example)
+
 An example application for demonstrating the usage of supertest for writing unit tests for node api's
 
 ## How to start
@@ -12,25 +14,32 @@ You must follow the instructions below:
 You will see this output below:
 
 ```
-mvp-jest@1.0.0 test
-> jest --detectOpenHandles --forceExit
+ PASS  src/__test__/app.test.js
+  API testing
+    ✓ Get all users (27 ms)
+    ✓ Create a user (34 ms)
+    ✓ Get user record by id (16 ms)
+    ✓ Update an existent user record (9 ms)
+    ✓ Update an inexistent user record (9 ms)
+    ✓ Get user record which does not exists (14 ms)
+    ✓ Should handle error (2 ms)
 
-GET / 200 1.186 ms - 2
-POST /user 200 5.650 ms - 45
-GET /user/1 200 0.349 ms - 43
-PUT /user/1 200 1.284 ms - 47
-GET /user/2 400 0.229 ms - 41
- PASS  __test__/app.test.js
-  Api testing
-    ✓ Get all users (42 ms)
-    ✓ Create a user (12 ms)
-    ✓ Get user record by id (8 ms)
-    ✓ Update a user record (6 ms)
-    ✓ Get user record which does not exists (8 ms)
-
+-----------------|---------|----------|---------|---------|-------------------
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------|---------|----------|---------|---------|-------------------
+All files        |     100 |      100 |     100 |     100 |                   
+ src             |     100 |      100 |     100 |     100 |                   
+  app.js         |     100 |      100 |     100 |     100 |                   
+  database.js    |     100 |      100 |     100 |     100 |                   
+  middlewares.js |     100 |      100 |     100 |     100 |                   
+ src/routes      |     100 |      100 |     100 |     100 |                   
+  routes.js      |     100 |      100 |     100 |     100 |                   
+-----------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
-Tests:       5 passed, 5 total
+Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        0.611s, estimated 1s
+Time:        0.299 s, estimated 1 s
+Ran all test suites.
+
 ```
 
