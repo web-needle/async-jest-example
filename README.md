@@ -6,12 +6,9 @@ An example application for demonstrating the usage of supertest for writing unit
 
 ## How to start
 
-You must follow the instructions below:
+You must follow the instructions below by shell command run `npm install && npm test`.
 
-1. Run command `npm install`; 
-2. Run command `npm test`
-
-You will see this output below:
+You will see the output below:
 
 ```
  PASS  src/__test__/app.test.js
