@@ -1,27 +1,15 @@
 import request from 'supertest';
+
 import app from '../app.js';
 import { errorHandler } from '../middlewares.js';
 import users from '../database.js';
+import { fixtures } from './fixtures.js';
+
+const new_user = fixtures.new_user;
+const inexistent_update_user = fixtures.inexistent_update_user;
+const existent_update_user = fixtures.existent_update_user;
 
 describe('API testing', () => {
-    const new_user =  { 
-        id: "1", 
-        name: "Username", 
-        login: "username"
-    };
-
-    const inexistent_update_user = { 
-        id: "1", 
-        name: "Username1", 
-        login: "Username1"
-    }
-
-    const existent_update_user = { 
-        id: "42", 
-        name: "Username24", 
-        login: "Username24"
-    }
-
     /**
      * Mocked Express Request object.
      */
