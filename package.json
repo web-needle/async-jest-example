@@ -2,18 +2,18 @@
   "name": "mvp-jest",
   "version": "1.0.0",
   "description": "An example application for demonstrating the usage of supertest for writing unit tests for node api's",
-  "main": "app.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test": "jest --detectOpenHandles --forceExit"
+    "test": "jest --collect-coverage --coverage --detectOpenHandles",
+    "test:watch": "jest --watchAll --collect-coverage --coverage --detectOpenHandles"
   },
   "author": "Bruno Peixoto",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
