@@ -2,9 +2,9 @@
 
 [![codecov](https://codecov.io/gh/web-needle/async-jest-example/branch/main/graph/badge.svg?token=VOQ4SD0JT7)](https://codecov.io/gh/web-needle/async-jest-example)
 
-An example application for demonstrating the usage of supertest for writing unit tests for node api's
+An example application for demonstrating the usage of supertest for writing unit tests for node APIs
 
-## How to start
+## How to reproduce
 
 You must follow the instructions below by shell command run `npm install && npm test`.
 
