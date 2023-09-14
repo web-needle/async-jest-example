@@ -44,7 +44,7 @@ export default {
     testEnvironmentOptions: {
       url: "http://localhost/",
     },
-    
+
     coverageThreshold: {
     global: {
           statements: 95,
