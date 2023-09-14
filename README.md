@@ -1,6 +1,6 @@
 # async-jest-example
 
-[![codecov](https://codecov.io/gh/web-needle/async-jest-example/branch/main/graph/badge.svg?token=VOQ4SD0JT7)](https://codecov.io/gh/web-needle/async-jest-example)
+[![codecov](https://codecov.io/gh/trouchet/asyncere-jesture/branch/main/graph/badge.svg?token=VOQ4SD0JT7)](https://codecov.io/gh/trouchet/asyncere-jesture)
 
 An example application for demonstrating the usage of supertest for writing unit tests for node APIs
 
