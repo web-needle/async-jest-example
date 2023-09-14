@@ -24,7 +24,7 @@ let res
  */
 const next = jest.fn()
 
-describe('API testing', () => {   
+describe('API testing', () => {
     /**
      * Reset the `req` and `res` object before each test is ran.
      */
@@ -51,11 +51,11 @@ describe('API testing', () => {
 
     it('Get all users', async () => {
         const expectedResponse = users;
-        
+
         const response = await request(app).get('/');
 
         expect(response.statusCode).toBe(200);
-        expect(response.body).toEqual(expectedResponse)       
+        expect(response.body).toEqual(expectedResponse)
     })
 
     it('Create a user', async () => {
@@ -73,7 +73,7 @@ describe('API testing', () => {
         const expectedResponse = users[0]
 
         const response = await request(app).get('/user/42')
-        
+
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expectedResponse)
 
@@ -85,7 +85,7 @@ describe('API testing', () => {
         const response = await request(app)
                                 .put('/user/42')
                                 .send(existent_update_user)
-        
+
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expectedResponse)
     })
@@ -98,7 +98,7 @@ describe('API testing', () => {
         const response = await request(app)
                                 .put('/user/2')
                                 .send(inexistent_update_user);
-        
+
         expect(response.statusCode).toBe(400);
         expect(response.body).toEqual(expectedResponse)
     })
@@ -109,7 +109,7 @@ describe('API testing', () => {
         }
 
         const response = await request(app).get('/user/2')
-        
+
         expect(response.statusCode).toBe(400);
         expect(response.body).toEqual(expectedResponse)
     })
