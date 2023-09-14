@@ -22,15 +22,15 @@ You will see the output below:
     ✓ Should handle error (2 ms)
 
 -----------------|---------|----------|---------|---------|-------------------
-File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -----------------|---------|----------|---------|---------|-------------------
-All files        |     100 |      100 |     100 |     100 |                   
- src             |     100 |      100 |     100 |     100 |                   
-  app.js         |     100 |      100 |     100 |     100 |                   
-  database.js    |     100 |      100 |     100 |     100 |                   
-  middlewares.js |     100 |      100 |     100 |     100 |                   
- src/routes      |     100 |      100 |     100 |     100 |                   
-  routes.js      |     100 |      100 |     100 |     100 |                   
+All files        |     100 |      100 |     100 |     100 |
+ src             |     100 |      100 |     100 |     100 |
+  app.js         |     100 |      100 |     100 |     100 |
+  database.js    |     100 |      100 |     100 |     100 |
+  middlewares.js |     100 |      100 |     100 |     100 |
+ src/routes      |     100 |      100 |     100 |     100 |
+  routes.js      |     100 |      100 |     100 |     100 |
 -----------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
@@ -39,4 +39,3 @@ Time:        0.299 s, estimated 1 s
 Ran all test suites.
 
 ```
-

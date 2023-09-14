@@ -14,7 +14,7 @@ router.post('/user', (req, res) => {
 
 router.get('/user/:id', (req, res) => {
     const userById = users.find(user => user.id === req.params.id);
-    
+
     if(userById) {
         res.send(userById)
     } else {
@@ -26,7 +26,7 @@ router.get('/user/:id', (req, res) => {
 
 router.put('/user/:id', (req, res) => {
     const userByIdIndex = users.findIndex(user => user.id === req.params.id);
-    
+
     if(userByIdIndex !== -1) {
         const userById = { ...users[userByIdIndex], ...req.body }
         users[userByIdIndex] = userById;
