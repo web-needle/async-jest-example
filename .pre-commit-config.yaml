@@ -1,0 +1,50 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+        exclude: ^.*\.egg-info/
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: pretty-format-json
+        args: [--autofix, --no-ensure-ascii, --no-sort-keys]
+      - id: debug-statements
+      - id: check-docstring-first
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.4.2
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+        args: [--whitespaces-count, '2'] # defaults to: 4
+      - id: insert-license
+        files: \.groovy$
+        args:
+          - --license-filepath
+          - --comment-style
+
+  - repo: https://github.com/pre-commit/mirrors-jshint
+    rev: 'v2.13.6'
+    hooks:
+      - id: jshint
+
+  # Unexpected error log "Unexpected token =>" on:
+  # File: /home/brunolnetto/github/trouchet/sappio/src/utils/logger.js: Line 34
+  # File: /home/brunolnetto/github/trouchet/sappio/src/core/utils/error-handler.js: Line 64
+  #
+  #
+
+  # - repo: https://github.com/pre-commit/mirrors-fixmyjs
+  #   rev: 'v2.0.0'
+  #   hooks:
+  #     - id: fixmyjs
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+    rev: v1.1.2
+    hooks:
+      - id: markdown-toc
