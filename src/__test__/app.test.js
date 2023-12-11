@@ -69,7 +69,7 @@ describe('API testing', () => {
         expect(response.body).toEqual(expectedResponse)
     })
 
-    it('Get user record by id', async () => {
+    it('Get user by id', async () => {
         const expectedResponse = users[0]
 
         const response = await request(app).get('/users/42')
@@ -79,7 +79,7 @@ describe('API testing', () => {
 
     })
 
-    it('Update an existent user record', async () => {
+    it('Update an existent user', async () => {
         const expectedResponse = existent_update_user
 
         const response = await request(app)
@@ -90,7 +90,7 @@ describe('API testing', () => {
         expect(response.body).toEqual(expectedResponse)
     })
 
-    it('Update an inexistent user record', async () => {
+    it('Update an inexistent user', async () => {
         const expectedResponse = {
             message: 'No user found with given ID'
         }
@@ -103,7 +103,7 @@ describe('API testing', () => {
         expect(response.body).toEqual(expectedResponse)
     })
 
-    it('Get user record which does not exists', async () => {
+    it('Get user which does not exists', async () => {
         const expectedResponse = {
             message: 'No user found with given ID'
         }
@@ -114,7 +114,7 @@ describe('API testing', () => {
         expect(response.body).toEqual(expectedResponse)
     })
 
-    it('Should handle error', () => {
+    it('Handle error for error handler middleware', () => {
         errorHandler(
             {
                 status: 500,
