@@ -11,31 +11,34 @@ You must follow the instructions below by shell command run `npm install && npm 
 You will see the output below:
 
 ```
- PASS  src/__test__/app.test.js
-  API testing
-    ✓ Get all users (27 ms)
-    ✓ Create a user (34 ms)
-    ✓ Get user record by id (16 ms)
-    ✓ Update an existent user record (9 ms)
-    ✓ Update an inexistent user record (9 ms)
-    ✓ Get user record which does not exists (14 ms)
-    ✓ Should handle error (2 ms)
+PASS  src/__test__/app.test.js
+API testing
+  ✓ Get all users (49 ms)
+  ✓ Create a user (13 ms)
+  ✓ Get user by id (8 ms)
+  ✓ Update an existent user (7 ms)
+  ✓ Update an inexistent user (6 ms)
+  ✓ Get user which does not exists (6 ms)
+  ✓ Handle error for error handler middleware (1 ms)
 
 -----------------|---------|----------|---------|---------|-------------------
-File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------|---------|----------|---------|---------|-------------------
-All files        |     100 |      100 |     100 |     100 |
- src             |     100 |      100 |     100 |     100 |
-  app.js         |     100 |      100 |     100 |     100 |
-  database.js    |     100 |      100 |     100 |     100 |
-  middlewares.js |     100 |      100 |     100 |     100 |
- src/routes      |     100 |      100 |     100 |     100 |
-  routes.js      |     100 |      100 |     100 |     100 |
+All files        |     100 |      100 |     100 |     100 |                   
+ src             |     100 |      100 |     100 |     100 |                   
+  app.js         |     100 |      100 |     100 |     100 |                   
+  database.js    |     100 |      100 |     100 |     100 |                   
+  middlewares.js |     100 |      100 |     100 |     100 |                   
+ src/__test__    |     100 |      100 |     100 |     100 |                   
+  fixtures.js    |     100 |      100 |     100 |     100 |                   
+ src/routes      |     100 |      100 |     100 |     100 |                   
+  controllers.js |     100 |      100 |     100 |     100 |                   
+  routes.js      |     100 |      100 |     100 |     100 |                   
 -----------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        0.299 s, estimated 1 s
+Time:        0.671 s, estimated 1 s
 Ran all test suites.
 
 ```
