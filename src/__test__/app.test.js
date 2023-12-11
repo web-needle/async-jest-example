@@ -52,7 +52,7 @@ describe('API testing', () => {
     it('Get all users', async () => {
         const expectedResponse = users;
 
-        const response = await request(app).get('/');
+        const response = await request(app).get('/users');
 
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expectedResponse)
@@ -63,7 +63,7 @@ describe('API testing', () => {
             ...users, new_user
         ]
 
-        const response = await request(app).post('/user').send(new_user);
+        const response = await request(app).post('/users').send(new_user);
 
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expectedResponse)
@@ -72,7 +72,7 @@ describe('API testing', () => {
     it('Get user record by id', async () => {
         const expectedResponse = users[0]
 
-        const response = await request(app).get('/user/42')
+        const response = await request(app).get('/users/42')
 
         expect(response.statusCode).toBe(200);
         expect(response.body).toEqual(expectedResponse)
@@ -83,7 +83,7 @@ describe('API testing', () => {
         const expectedResponse = existent_update_user
 
         const response = await request(app)
-                                .put('/user/42')
+                                .put('/users/42')
                                 .send(existent_update_user)
 
         expect(response.statusCode).toBe(200);
@@ -96,7 +96,7 @@ describe('API testing', () => {
         }
 
         const response = await request(app)
-                                .put('/user/2')
+                                .put('/users/2')
                                 .send(inexistent_update_user);
 
         expect(response.statusCode).toBe(400);
@@ -108,7 +108,7 @@ describe('API testing', () => {
             message: 'No user found with given ID'
         }
 
-        const response = await request(app).get('/user/2')
+        const response = await request(app).get('/users/2')
 
         expect(response.statusCode).toBe(400);
         expect(response.body).toEqual(expectedResponse)
