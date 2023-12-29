@@ -22,18 +22,18 @@ API testing
   ✓ Handle error for error handler middleware (1 ms)
 
 -----------------|---------|----------|---------|---------|-------------------
-File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -----------------|---------|----------|---------|---------|-------------------
-All files        |     100 |      100 |     100 |     100 |                   
- src             |     100 |      100 |     100 |     100 |                   
-  app.js         |     100 |      100 |     100 |     100 |                   
-  database.js    |     100 |      100 |     100 |     100 |                   
-  middlewares.js |     100 |      100 |     100 |     100 |                   
- src/__test__    |     100 |      100 |     100 |     100 |                   
-  fixtures.js    |     100 |      100 |     100 |     100 |                   
- src/routes      |     100 |      100 |     100 |     100 |                   
-  controllers.js |     100 |      100 |     100 |     100 |                   
-  routes.js      |     100 |      100 |     100 |     100 |                   
+All files        |     100 |      100 |     100 |     100 |
+ src             |     100 |      100 |     100 |     100 |
+  app.js         |     100 |      100 |     100 |     100 |
+  database.js    |     100 |      100 |     100 |     100 |
+  middlewares.js |     100 |      100 |     100 |     100 |
+ src/__test__    |     100 |      100 |     100 |     100 |
+  fixtures.js    |     100 |      100 |     100 |     100 |
+ src/routes      |     100 |      100 |     100 |     100 |
+  controllers.js |     100 |      100 |     100 |     100 |
+  routes.js      |     100 |      100 |     100 |     100 |
 -----------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
