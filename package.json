@@ -2,10 +2,10 @@
   "name": "mvp-jest",
   "version": "1.0.0",
   "description": "An example application for demonstrating the usage of supertest for writing unit tests for node api's",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon --trace-warnings ./src/index.js",
     "test": "jest --collect-coverage --coverage --detectOpenHandles",
     "test:watch": "jest --watchAll --collect-coverage --coverage --detectOpenHandles"
   },
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
