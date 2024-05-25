@@ -31,8 +31,8 @@ export default {
 
     // If the test path matches any of the patterns, it will be skipped.
     testPathIgnorePatterns: [
-      "node_modules/", 
-      "<rootDir>/src/index.js", 
+      "node_modules/",
+      "<rootDir>/src/index.js",
       "<rootDir>/src/server.js"
     ],
 
@@ -41,9 +41,9 @@ export default {
 
     // If the file path matches any of the patterns, coverage information will be skipped.
     coveragePathIgnorePatterns: [
-      "node_modules/", 
+      "node_modules/",
       "src/config/",
-      "<rootDir>/src/index.js", 
+      "<rootDir>/src/index.js",
       "<rootDir>/src/server.js"
     ],
 
